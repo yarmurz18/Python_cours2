@@ -52,6 +52,7 @@ encode_jwt3 = jwt.encode(payload=payload3, key=secret3, algorithm="HS256")
 
 decoded2 = jwt.decode(
     encode_jwt3,
+
     secret1,
     algorithms=["HS256"],
 )

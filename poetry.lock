@@ -366,7 +366,27 @@ pluggy = ">=1.5,<2"
 [package.extras]
 dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
+[[package]]
+name = "qrcode"
+version = "8.1"
+description = "QR Code image generator"
+optional = false
+python-versions = "<4.0,>=3.9"
+groups = ["main"]
+files = [
+    {file = "qrcode-8.1-py3-none-any.whl", hash = "sha256:9beba317d793ab8b3838c52af72e603b8ad2599c4e9bbd5c3da37c7dcc13c5cf"},
+    {file = "qrcode-8.1.tar.gz", hash = "sha256:e8df73caf72c3bace3e93d9fa0af5aa78267d4f3f5bc7ab1b208f271605a5e48"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+
+[package.extras]
+all = ["pillow (>=9.1.0)", "pypng"]
+pil = ["pillow (>=9.1.0)"]
+png = ["pypng"]
+
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.12"
-content-hash = "2dd3a4ad6f8bf16125300afd8f3cbe2fd4d5265ae77b2102eaaff901f852063d"
+python-versions = ">=3.12,<4.0"
+content-hash = "3ef17e162bcae487acf4d0e9fc1d345268541afbe10deed7c19150fca6e63e63"

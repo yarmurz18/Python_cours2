@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  book_store:
+    image: postgres:16
+    container_name: book_store
+    hostname: book_store
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT_OUTER}:${POSTGRES_PORT}"
+
+    networks:
+      - db_network
+
+
+networks:
+  db_network:
+    driver: bridge
